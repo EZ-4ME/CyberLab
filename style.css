@@ -1,0 +1,64 @@
+/*Home*/
+{
+    margin:0;
+    padding:0;
+}
+
+section.header{
+    min-height:100px;
+    width:100%;
+    background-image:url(bg.jpg);
+    background-position:unset;
+    background-size:cover;
+    position: relative;
+}
+nav{
+    display:flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a.bar{
+    color:rgb(253, 252, 252);
+    text-decoration: none;   
+     margin-left: 16px;   
+    font-size: 25px;
+    font-family:Arial;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.home{
+    color: snow;
+    background: rgba(0, 0, 0, 0.5);
+    height:50%;
+    width: 60%;
+    margin: auto;
+    padding-top: 1px;
+}
+
+/*cursor*/
+a.bar:active{
+    color: black;
+}
+a.bar:hover{
+    text-decoration: underline;
+    border: 5px outset black;
+    
+
+}
+/*form page*/
+section.headerForm, section.headerEdu, section.headerAboutMe {
+    background: rgba(13, 14, 13, 0.5);
+   
+}
+p{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.form{
+    background-color:rgb(56, 70, 82);
+    margin: auto;
+    width:30%;
+    color: azure;
+    text-align:left;
+}

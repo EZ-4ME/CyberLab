@@ -1,0 +1,102 @@
+<html>
+    <head>
+    <link rel="icon" type="x-icon" href="logo2.png">
+    <meta name="viewport" content="with=device-width, intial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">           
+    <!-- must use rel=stylesheet because file in CSS -->
+   
+    <script>
+        function validate_form()
+    {
+	valid=true;
+        if (document.form.name.value=='' || document.form.phoneNum.value==''
+        || document.form.email.value=='' || (document.form.gender[0].checked==false
+        && document.form.gender[1].checked==false) || document.form.state.selectedIndex==0)
+        {
+            alert('Please fill in the form');
+            document.form.focus();
+            valid=false;
+        }
+        else 
+        {
+            alert('thank you' + document.form.name.value);
+        }   
+        return valid;
+    
+    } 
+    </script>
+    </head>
+    <body background="bg5.jpg">
+        <section class="headerForm">
+            <nav>
+               <center><a class="logo" href="SNlogo.jpg" class="logo"><img src="logo2.png" width="50%"></a></center>
+                <div class="linkPage"></div>
+                <ul>
+                    <a class="bar" href="index.html">Home</a>
+                    <a class="bar" href="aboutMe.html" >About me</a>
+                    <a class="bar" href="edu.html" >Education</a>
+                    <a class="bar" href="form.html" >Contact</a>
+                </ul>
+            </nav>
+        </section>
+        <hr>
+        <br><br>
+        <table border="1" class="form">
+            <tr><th align="center">FORM</th></tr>
+            <tr><td>
+        <form name='form' method='post' action='https://formsubmit.co/shahrul.nasri2001@email.com' onSubmit='return validate_form();'>               
+            <br>
+            <p>Name : <input type='text' name='name'></p>
+            <p>Age : <input type='text' name='age'></p>
+
+            <p>Gender: 
+            <input type='radio' name='gender' value='Male'>Male
+            <input type='radio' name='gender' value='Female'>Female
+            
+            <p>State : 
+            <select name='state'>
+                <option>select state</option>
+                <option value='selangor'>selangor</option>
+                <option value='johor'>johor</option>
+                <option value='melaka'>melaka</option>
+                <option value='negeri sembilan'>negeri sembilan</option>
+                <option value='pahang'>pahang</option>
+                <option value='kelantan'>kelantan</option>
+                <option value='terengganu'>terengganu</option>
+                <option value='perlis'>perlis</option>
+                <option value='kedah'>kedah</option>
+                <option value='sabah'>sabah</option>
+                <option value='sarawak'>sarawak</option>
+                <option value='perak'>perak</option>
+                <option value='kuala lumpur'>kuala lumpur</option>
+                <option value='putrajaya'>putrajaya</option>
+                <option value='labuan'>labuan</option>
+            </select>
+
+            <p>Phone Number : <input type='text' name='phoneNum'></p>
+
+            <p>Email : <input type='email' name='email'></p>
+
+            <p>Interest: 
+            <input type='checkbox' name='int' value='Social'>Social
+            <input type='checkbox' name='int' value='Art'>Art
+            <input type='checkbox' name='int' value='Science'>Science
+            <input type='checkbox' name='int' value='Science'>Games
+            <input type='checkbox' name='int' value='Science'>IT
+            </p>
+
+            <p>Photo: <input type='file' name='file'></p>
+
+            <p>Message : <textarea name="message" rows="4" cols="40"></textarea></p>
+            </td></tr>
+        </table>
+            <br>
+            <center>
+            <input type='submit' name='send' value='Submit'>&nbsp;
+            <input type='reset' name='reset' value='RESET'>
+            </center>
+        </form>
+    </body>
+</html>
+
